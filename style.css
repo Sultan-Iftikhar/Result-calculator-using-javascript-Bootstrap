@@ -1,0 +1,17 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.thecon{
+    background-color: #95a5a6;
+    height: 80vh;
+    
+}
+.itemis{
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+.temis .col-md-4 h1{
+    text-align: center;
+    padding: 30px;
+}
