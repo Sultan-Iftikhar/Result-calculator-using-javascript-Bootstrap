@@ -15,3 +15,40 @@
     text-align: center;
     padding: 30px;
 }
+.the-row{
+    margin: 10px;
+    padding: 10px;
+}
+.upper-row{
+    margin-top: 50px;
+}
+h4{
+    margin-left: 31px;
+    margin-top: 10px;
+}
+button{
+    margin-left: 33px;
+    margin-bottom: 20px;
+}
+.lineabove{
+    border-top: 2px solid #2c3e50;
+    margin: auto;
+}
+.theresult{
+    margin-left: 33px;
+    margin-bottom: 10px;
+}
+.resultannounce{
+    border-top: 2px solid #2c3e50;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.resultannounce .scndid h1{
+    margin-left: 600px;
+    margin-top: 10px;
+    
+}
+.resultannouncespan{
+    margin-left: 590px;
+    margin-top: 10px;
+}
