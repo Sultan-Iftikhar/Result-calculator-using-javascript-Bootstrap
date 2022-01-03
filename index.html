@@ -26,33 +26,33 @@
         </div>
         <div class="row the-row">
             <div class="col">
-                <input type="number" class="form-control" placeholder="English" aria-label="First name">
+                <input id="english" type="number" class="form-control" placeholder="English" aria-label="First name" value="">
             </div>
             <div class="col">
-                <input type="number" class="form-control" placeholder="Math" aria-label="First name">
-            </div>
-        </div>
-
-        <div class="row the-row">
-            <div class="col">
-                <input type="number" class="form-control" placeholder="Biology" aria-label="First name">
-            </div>
-            <div class="col">
-                <input type="number" class="form-control" placeholder="Islamiat" aria-label="First name">
+                <input id="math" type="number" class="form-control" placeholder="Math" aria-label="First name"  value="">
             </div>
         </div>
 
         <div class="row the-row">
             <div class="col">
-                <input type="number" class="form-control" placeholder="Urdu" aria-label="First name">
+                <input id="biology" type="number" class="form-control" placeholder="Biology" aria-label="First name" value="">
             </div>
             <div class="col">
-                <input type="number" class="form-control" placeholder="Social studies" aria-label="First name">
+                <input id="islamiat" type="number" class="form-control" placeholder="Islamiat" aria-label="First name" value="">
+            </div>
+        </div>
+
+        <div class="row the-row">
+            <div class="col">
+                <input id="urdu" type="number" class="form-control" placeholder="Urdu" aria-label="First name" value="">
+            </div>
+            <div class="col">
+                <input id="sst" type="number" class="form-control" placeholder="Social studies" aria-label="First name" value="">
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button id="theButtonis" class="btn btn-primary" onclick="calculate()">Result</button>
             </div>
         </div>
 
@@ -63,35 +63,69 @@
         </div>
         <div class="row theresult">
             <div class="col-md-3">
-                <span>Totale : 500</span>
-            </div>
-            <div class="col-md-3">
-                <span>Percentage : </span>
-            </div>
-            <div class="col-md-3">
-                <span>Grade : </span>
-            </div>
-            <div class="col-md-3">
-                <span>Obtained : </span>
+                <span>Totale : 600</span>
             </div>
         </div>
+        
+            <div class="row">
+                <div class="col-md-3">
+                    <p id="theresis"></p>
+                </div>
+            </div>
 
-        <div class="row align-items-center resultannounce">
-            <div class="col-md-3 scndid">
-                <h1>Pass</h1>
-            </div>
-        </div>
-        <div class="row align-items-center resultannouncespan">
-            <div class="col-md-3 scndid">
-                <span>Congratulations 👍</span>
-            </div>
-        </div>
     </div>
 
     <script>
-        
+        function calculate(){
+            console.log('button is working')
+            let total = 600;
+            let english = document.getElementById('english').value;
+            let math = document.getElementById('math').value;
+            let islamiat = document.getElementById('islamiat').value;
+            let biology = document.getElementById('biology').value;
+            let urdu = document.getElementById('urdu').value;
+            let sst = document.getElementById('sst').value;
+            
+            let obtained = parseFloat(english)+parseFloat(math)+parseFloat(islamiat)+parseFloat(biology)+parseFloat(urdu)+parseFloat(sst);
+            let percentage = (obtained / 600)* 100;
+            console.log('button is working'+`${obtained}`)
+            let theGrade;
+            
+            if(percentage<=100 && percentage>=80){
+                theGrade = 'A'
+                
+            }
+            else if(percentage<=79 && percentage>=60){
+                theGrade= 'B'
+                
+            }
+            else if(percentage<=59 && percentage>=40){
+                theGrade ='C'
+                themessage = "PASS"
+            }
+            else if(percentage<=39 && percentage>=28){
+                theGrade = 'D'
+                
+            }
+            else if(percentage<=27 && percentage>=0){
+                theGrade= 'F'
+                
+            }
+            else{
+                alert('Please Enter the correct values')
+            }
+            
+
+
+            document.getElementById('theresis').innerHTML = `Percentage:${percentage}%  Obtained:${obtained}  Grade:${theGrade}`;
+            
+        };
+
+
+
+
     </script>
-    
+
 </body>
 
 </html>
